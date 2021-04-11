@@ -28,6 +28,6 @@ func PaymentFactory(purchase Purchase) (Payment, error) {
 	case Pix:
 		return NewPixPayment(purchase), nil
 	default:
-		return nil, errors.New("[PAYMENT ERROR] Invalid payment method")
+		return nil, errors.New("[PAYMENT ERROR] Payment method not implemented")
 	}
 }
