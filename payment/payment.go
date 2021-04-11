@@ -24,9 +24,9 @@ type Payment interface {
 func PaymentFactory(purchase Purchase) (Payment, error) {
 	switch purchase.Method {
 	case Boleto:
-		return &BoletoPayment{BuyInfo: purchase}, nil
+		return NewBoletoPayment(purchase), nil
 	case Pix:
-		return &PixPayment{BuyInfo: purchase}, nil
+		return NewPixPayment(purchase), nil
 	default:
 		return nil, errors.New("[PAYMENT ERROR] Invalid payment method")
 	}
