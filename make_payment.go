@@ -1,8 +1,9 @@
 package main
 
 import (
-	"golang-factory/payment"
 	"log"
+
+	"github.com/JanainaLudwig/factory-method-go/payment"
 )
 
 func main() {
